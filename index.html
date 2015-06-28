@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html >
+	<head>
+  		<title>Scope</title>
+  		<script src="angular.js"></script>
+  		<script src="app.js"></script>
+  		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	</head>
+	<body ng-app="store" ng-controller="StoreController as store">
+		<!-- <div ng-hide="store.product.soldOut"> -->
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="product in store.products">
+				<h3>
+					{{product.name}}
+					<em class = "pull-right">${{product.price}}</em>
+				</h3>
+			</li>
+		</ul>
+	</body>
+</html>
